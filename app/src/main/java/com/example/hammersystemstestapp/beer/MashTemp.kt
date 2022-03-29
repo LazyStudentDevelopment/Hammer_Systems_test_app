@@ -1,6 +1,6 @@
 package com.example.hammersystemstestapp.beer
 
 data class MashTemp(
-    val duration: Int,
+    val duration: Double,
     val temp: TempX
 )

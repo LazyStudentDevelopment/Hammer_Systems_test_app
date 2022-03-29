@@ -2,6 +2,7 @@ package com.example.hammersystemstestapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -16,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    private lateinit var adapter: Adapter
+    private lateinit var myAdapter: Adapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,7 +37,7 @@ class MainActivity : AppCompatActivity() {
                 return@launchWhenCreated
             }
             if(response.isSuccessful && response.body() != null){
-                adapter.beers= response.body()!!
+                response.body()!!.also { myAdapter.beers = it }
             }else{
                 Toast.makeText(applicationContext, "Response was not successful", Toast.LENGTH_SHORT).show()
             }
@@ -44,8 +45,8 @@ class MainActivity : AppCompatActivity() {
 
     }
     private fun  setupRecyclerView() = binding.recyclerView.apply {
-        adapter = Adapter()
-        adapter = adapter
+        myAdapter = Adapter()
+        adapter = myAdapter
         layoutManager = LinearLayoutManager(this@MainActivity)
 
     }

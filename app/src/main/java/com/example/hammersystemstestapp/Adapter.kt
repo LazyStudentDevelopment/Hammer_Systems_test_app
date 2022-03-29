@@ -1,4 +1,5 @@
 package com.example.hammersystemstestapp
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
@@ -6,6 +7,8 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hammersystemstestapp.beer.Beer
 import com.example.hammersystemstestapp.databinding.RecyclerviewItemBinding
+import com.squareup.picasso.Picasso
+import retrofit2.Response.error
 
 
 class Adapter : RecyclerView.Adapter<Adapter.ViewHolder>() {
@@ -40,7 +43,10 @@ class Adapter : RecyclerView.Adapter<Adapter.ViewHolder>() {
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.binding.apply {
             val beer = beers[position]
-            name.text = beer.name
+            name.text = beer.hops.name
+            Picasso.get()
+                .load("${beer.image_url}")
+                .into(imageUrl)
         }
     }
 }
