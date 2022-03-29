@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_menu"
+        android:title="Меню"
+        android:textSize="12sp"
+        android:icon="@drawable/icon_menu"
+        />
+
+    <item
+        android:id="@+id/action_profile"
+        android:title="Профиль"
+        android:textSize="12sp"/>
+
+    <item
+        android:id="@+id/action_cart"
+        android:title="Корзина"
+        android:textSize="12sp"/>
+</menu>
