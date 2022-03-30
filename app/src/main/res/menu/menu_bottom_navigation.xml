@@ -2,18 +2,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/action_menu"
-        android:title="Меню"
+        android:title="@string/menu"
         android:textSize="12sp"
         android:icon="@drawable/icon_menu"
+        android:iconTint="@color/teal_700"
+
         />
 
     <item
         android:id="@+id/action_profile"
-        android:title="Профиль"
-        android:textSize="12sp"/>
+        android:title="@string/profile"
+        android:textSize="12sp"
+        android:icon="@drawable/icon_profile"
+        />
 
     <item
         android:id="@+id/action_cart"
-        android:title="Корзина"
-        android:textSize="12sp"/>
+        android:title="@string/cart"
+        android:textSize="12sp"
+        android:icon="@drawable/icon_cart"/>
 </menu>

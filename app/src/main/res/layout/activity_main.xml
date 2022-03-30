@@ -101,6 +101,7 @@
                                 android:orientation="horizontal">
 
                                 <Button
+                                    android:id="@+id/top_button"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:backgroundTint="#FFFFFF"
@@ -145,6 +146,10 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_alignParentBottom="true"
+        app:itemIconTint="@drawable/bottom_nav_icon_color_selector"
+        app:itemTextColor="@drawable/bottom_nav_icon_color_selector"
         app:menu="@menu/menu_bottom_navigation"
+
+
         />
 </RelativeLayout>

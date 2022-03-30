@@ -43,7 +43,7 @@ class Adapter : RecyclerView.Adapter<Adapter.ViewHolder>() {
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.binding.apply {
             val beer = beers[position]
-            name.text = beer.hops.name
+            name.text = beer.name
             Picasso.get()
                 .load("${beer.image_url}")
                 .into(imageUrl)
