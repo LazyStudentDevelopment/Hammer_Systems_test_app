@@ -44,6 +44,8 @@ class Adapter : RecyclerView.Adapter<Adapter.ViewHolder>() {
         holder.binding.apply {
             val beer = beers[position]
             name.text = beer.name
+            description.text = beer.description
+            price.text = "от ${(0..1000).random()} р"
             Picasso.get()
                 .load("${beer.image_url}")
                 .into(imageUrl)
