@@ -47,7 +47,7 @@ class Adapter : RecyclerView.Adapter<Adapter.ViewHolder>() {
             description.text = beer.description
             price.text = "от ${(0..1000).random()} р"
             Picasso.get()
-                .load("${beer.image_url}")
+                .load(beer.image_url)
                 .into(imageUrl)
         }
     }

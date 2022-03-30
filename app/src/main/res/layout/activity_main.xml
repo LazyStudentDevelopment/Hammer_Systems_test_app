@@ -17,7 +17,7 @@
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
             android:layout_marginRight="40dp"
             android:layout_marginTop="15dp"
@@ -112,7 +112,7 @@
 
                         <HorizontalScrollView
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:fadingEdgeLength="30dp"
                             android:requiresFadingEdge="horizontal"
                             android:scrollbars="none">
