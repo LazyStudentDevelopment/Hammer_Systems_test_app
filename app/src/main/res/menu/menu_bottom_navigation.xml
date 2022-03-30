@@ -5,7 +5,6 @@
         android:title="@string/menu"
         android:textSize="12sp"
         android:icon="@drawable/icon_menu"
-        android:iconTint="@color/teal_700"
 
         />
 
